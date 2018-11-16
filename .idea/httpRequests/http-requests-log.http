@@ -1,0 +1,550 @@
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=LogIn&AppointmentID=3&fname=name1&lname=lastname&appointmentID=1
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T065616.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=CancelAppointment&AppointmentID=3&fname=name1&lname=lastname&appointmentID=1
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T042932.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname&appointmentID=1
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T042916.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=CancelAppointments&AppointmentID=2&fname=name1&lname=lastname&appointmentID=1
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T042856.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname&appointmentID=1
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T042848.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname&appointmentID=1
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T042811.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname&appointmentID=1
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T042513.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname&appointmentID=4
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T042450.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=GetAppointments&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T042001.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=GetAppointments&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T041643.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=GetAppointments&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T041630.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=GetAppointments&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T041404.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=GetAppointments&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T041352.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=GetAppointments&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T041337.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=GetAppointments&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T041312.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=GetAppointments&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T041230.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=LogIn&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T041206.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=GetAppointments&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T041153.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=LogIn&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T035900.200.html
+
+###
+
+POST http://assign/Logout.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=LogIn&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T035855.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=LogIn&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T035831.200.html
+
+###
+
+POST http://assign/LogOut.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=LogIn&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T035827.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=LogIn&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T035821.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=LogIn&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T035750.200.html
+
+###
+
+POST http://assign/LogOut.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=LogIn&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T035744.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=LogIn&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T035736.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=LogIn&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T035733.200.html
+
+###
+
+POST http://assign/LogOut.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=LogIn&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T035729.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=LogIn&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T035723.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=LogIn&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T035706.200.html
+
+###
+
+POST http://assign/LogOut.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=LogIn&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T035702.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=LogIn&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T035629.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=LogIn&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T035603.200.html
+
+###
+
+POST http://assign/Admin.php?=&type=Customer&email=admin@barber.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T035540.200.html
+
+###
+
+POST http://assign/LogIn.php?=&type=Customer&email=micheal@gmail.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T024540.200.html
+
+###
+
+POST http://assign/LogIn.php?=&type=Customer&email=micheal@gmail.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T024434.200.html
+
+###
+
+POST http://assign/LogIn.php?=&type=Barber&email=micheal@gmail.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T024339.200.html
+
+###
+
+POST http://assign/LogIn.php?=&type=Barber&email=micheal@gmail.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T024232.200.html
+
+###
+
+POST http://assign/LogIn.php?=&type=Barber&email=micheal@gmail.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T023649.200.html
+
+###
+
+POST http://assign/LogIn.php?=&type=Barber&email=micheal@gmail.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T023512.200.html
+
+###
+
+POST http://assign/LogIn.php?=&type=Barber&email=micheal@gmail.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T023511.200.html
+
+###
+
+POST http://assign/LogIn.php?=&type=Barber&email=micheal@gmail.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T023356.200.html
+
+###
+
+POST http://assign/LogIn.php?=&type=Barber&email=micheal@gmail.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T023347.200.html
+
+###
+
+POST http://assign/LogIn.php?=&type=Barber&email=micheal@gmail.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T023128.200.html
+
+###
+
+POST http://assign/Logout.php?=&type=Barber&email=micheal@gmail.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T023123.200.html
+
+###
+
+POST http://assign/LogIn.php?=&type=Barber&email=micheal@gmail.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-07T023111.200.html
+
+###
+
+POST http://assign/LogIn.php?=&type=Customer&email=maddob@mac.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-06T122357.200.html
+
+###
+
+POST http://assign/LogOut.php?=&type=Customer&email=maddob@mac.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-06T122351.200.html
+
+###
+
+POST http://assign/LogIn.php?=&type=Customer&email=maddob@mac.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-06T122341.200.html
+
+###
+
+POST http://assign/CreateAccount.php?=&type=Customer&email=maddob@mac.com&passwd=Password1!&action=CancelAppointment&AppointmentID=2&fname=name1&lname=lastname
+Accept: */*
+Cache-Control: no-cache
+type: Customer
+email: mwitte@mac.com
+passwd: Password1!
+
+<> 2018-11-05T105533.200.html
+
+###
+

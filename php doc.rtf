@@ -1,0 +1,142 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Courier New;}{\f2\fnil\fcharset0 Courier New;}{\f3\fnil\fcharset0 Arial;}}
+{\colortbl ;\red106\green135\blue89;}
+{\*\generator Riched20 10.0.17134}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\b\f0\fs32\lang9 Databases / Web Development / GUI Programming \b0\fs22\par
+
+\pard\sa200\sl276\slmult1  IDE: PHPSTORM \par
+Lauguage: PHP 5.5\par
+
+\pard\sa200\sl276\slmult1\qc\b\fs24 Research\par
+
+\pard\sa200\sl276\slmult1\b0 I have decided to use PHP OOP to design the inner workings of the API the reason for the API is to decouple the backend code from the frontend as this will allow frontend appilcations on other platforms to access the service and stop duplication code like querys and databases connections in the frontend.\par
+Another reason is frontend code can be revsered, variable strings can also be extract from byte code or binary code and  injected with malicous code and distrubeted.\par
+A login system is strongly advised agans't due to secrurity reasons over using Login system API such as facebook and other social networks. I would also add automated testing to all componets of my code however due to the fact it is a assignment, low complexity and not marked I deciede to skip over automated tests and Facebook API.\par
+However I will do some Simple Logging to ensure that all dangerous events are recorded and the IP's responsible for those events are captured.\par
+The general design is to have the main functionality in classes that use proper OOP concepts and then use a short script to determine if the requesters is suitable to access this function for example type of user, If user is logged in and if all required data for the function is avaible and let the class determine weather it is of proper nature.\par
+\par
+I listed out the php files of whick frontend can POST and GET to whick are\par
+-Log in POST\par
+-Log out POST\par
+-Book appointment POST \par
+-Cancel Appointment POST\par
+-View Appointments GET (also simple querys for booking appointments); \par
+Note: to access any of the functions a user must go through log in to ensure Session variable are set in API.\par
+
+\pard\sa200\sl276\slmult1\qc\b Naming schema\par
+
+\pard\sa200\sl276\slmult1\b0 - variables lower case\par
+- CONST are all caps\par
+-Functions start with UpperCase\par
+-all whitespace in variables is represented with _\par
+-all whitespace in function is reprsented with camel letters\par
+
+\pard\sa200\sl276\slmult1\qc\b Security \b0\par
+
+\pard\sa200\sl276\slmult1 PHP session will ensure to stop people from creating their own HTTP request with another accounts ID whick can be easly guessed due to AUTO INCREMENT.\fs22\par
+\fs24  Limiting the amount of requests can be implemented to prevent DOS attacks for overloading the server as well as ensuring a low timeout is set on functions repeatly called to prevent attacks like slow moris.\par
+
+\pard\sa200\sl276\slmult1\qc\b Structure\par
+
+\pard\sa200\sl276\slmult1\b0 The code to connect will be placed in a class and implement a singleton design to ensure multilpy connections are not connected.This class has a query function however this should only be used for simple querys such as SELECT * FROM TABLE as running query based on user controlled data can lead to sql injection. \par
+I also determined a set of response for all the endpoints of the API whick will be return in a JSON. Errors will never be included and could be logged instead for debuggin purposes. This can be configure on the server PHP conf file.\par
+
+\pard\sa200\sl276\slmult1\qc\fs28 Login \par
+
+\pard\sa200\sl276\slmult1\fs24 To start ensure user is not already logged in.\par
+check all required post fields are set.\par
+Then validate username, email and passwd to ensure they follow schema and also stops code inject however mysql escape string is still used for good practice. \par
+When fields are validated the password is then hashed.\par
+Import database class create prepared statement and excute if rows are greater then one zero the user is present return a json array containing a variable called success which in this case is true. I then extracted the data from the return result and put it in seesion varaibles.\par
+The Schema of the session looks like this\par
+Type : Type of user barber,admin,customer\par
+ID,fname,lname,email : which all types have in common\par
+The only three possible outcomes for the frontend are "Fail","Success" and "Already Logged in" which are in json format.\par
+I used wamp to set up a quick form and test the php. It allowed me to log into both barber and customers with a hashed password.\par
+
+\pard\sa200\sl276\slmult1\qc\b\fs28 Create Login\par
+
+\pard\sa200\sl276\slmult1\b0\fs24 To start check POST and ensure all relevant data is set.\par
+Ensure that user is not logged in already.\par
+Ensure connectivity to database\par
+Validate all data separtatly so response can specfie specfic error then create account based on the type the user is barber,customer.\par
+Using prepared statements \par
+-However have left out phonenumber  as it is not used anywhere in database.\par
+Will also create a barber Rating or Customer Rating table.\par
+
+\pard\sa200\sl276\slmult1\qc Possible outcomes\par
+
+\pard\sa200\sl276\slmult1 -one of the fields not following restrictions will send back detailed report\par
+-Email is alreay used\par
+-General fail in database or API whick will be returned with just fail for security reasons.\par
+I again test it on a simple form leaving null values, trying to inject sql and javascript whick neither passed in any field.\par
+\par
+GetAppointments\par
+This class is for retreiving information need to book appointments or view them.\par
+It uses the GET protcol and a GET permeter of action must be given.\par
+To use of the following functions Use the action in peremters\par
+
+\pard\sa200\sl276\slmult1\qc\b Get up coming Appointments(GetMyAppointments)\par
+
+\pard\box\brdrdash\brdrw0 \sa200\sl276\slmult1\qc Using prepared statements and Session variables I created a query\par
+
+\pard\box\brdrdash\brdrw0 \sa200\sl276\slmult1  \cf1\b0\f1\fs18 SELECT\f2\lang1033    \f1\lang9 concat(Barber.fname, Barber.lname) AS BarbersName,\line           concat(customer.fname, customer.lname) AS CustomerName,\line           barbershop.name                    AS barbershopname,\line           Appointments.date,\line           Appointments.time\line           FROM Appointments\line           CROSS JOIN Barber ON Barber.id = Appointments.barberID\line           CROSS JOIN Barbershop ON Appointments.barbershopID = Barbershop.id\line           CROSS JOIN customer ON Appointments.customerID = customer.id\line           WHERE Appointments.customerID = ?\line           AND  Appointments.date > CURRENT_DATE()\par
+\par
+\cf0\f2\fs16\lang1033\par
+\f3\fs22 To get All upcoming appointments I then retured a json response containing theses and a error if database related problems occured or nothing success but nothing if not appointments were scheluded.\par
+Possible Outocomes \par
+Fail - Return json boolean success whick is false\par
+Not Logged in (Session variable arn't set)\tab Either Redirect To Log in page or return fail\par
+Success but No data - return success but no data\par
+Success With Data - return list of data in Database in JSON format.\par
+The query is limit to 10.\par
+\tab\par
+
+\pard\box\brdrdash\brdrw0 \sa200\sl276\slmult1\qc\b barbers freetime(BarberFreeTime) \par
+
+\pard\box\brdrdash\brdrw0 \sa200\sl276\slmult1\b0 For barbers UI design a user must know a list of barbers to choose from or barbershops and also barbers freetime.\par
+Input -> BarberID & Date\par
+We can also get a json response of a barbers freetime on the a particluar date.\par
+Output -> json Array of free time that the barber has on a particular day with starting time and finishing time of appointment.If no times are sent back then the barber has nothing back for said date. \par
+possible error:\par
+Date: Not formated  \par
+
+\pard\box\brdrdash\brdrw0 \sa200\sl276\slmult1\qc\b List of barbers/barbershops(ListBarbers/ListBarberShops)\b0\par
+
+\pard\box\brdrdash\brdrw0 \sa200\sl276\slmult1 We can get a list of barbers/barbershops\par
+\par
+
+\pard\box\brdrdash\brdrw0 \sa200\sl276\slmult1\qc\b Book Appointments\par
+
+\pard\box\brdrdash\brdrw0 \sa200\sl276\slmult1\b0 First off we must establise that all variables enter are filter and checked.\par
+Such as \par
+-Babershop, barber,date and time and customer must be given in JSON format to log appointment\par
+-Only customer can set appointments and this will be checked in Session ID Which is also need.\par
+-Appointment must be in furture \par
+-Barber must be approved\par
+\par
+\par
+Last notes\par
+-I could of created a class to control reponse allowing me to send json in a controlled way and where every responses is in one class.This is helpful for variable name as It can be quite tricky to debug a bug with a error code which can be cause be mispelled variable names.\par
+\par
+\par
+\par
+\f1\lang9\par
+
+\pard\sa200\sl276\slmult1\qc\f0\fs24\par
+
+\pard\sa200\sl276\slmult1\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\fs22\par
+\par
+}
+ 
