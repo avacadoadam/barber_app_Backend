@@ -47,7 +47,11 @@ class Log_In
         $this->ValidateUserInput($email, $passwd, $type);
         require_once 'Inner/Database.php';
         $this->DB = DatabaseOperations::Instance();
-        $this->User_Info_Correct($email, $passwd, $type);
+        if ($type == "Admin") {
+            $this->AdminLogin($email, $passwd, $type);
+        } else {
+            $this->User_Info_Correct($email, $passwd, $type);
+        }
     }
 
     /**
@@ -79,6 +83,26 @@ class Log_In
         }
     }
 
+    private function AdminLogin($email, $passwd, $type)
+    {
+        mysqli_real_escape_string($this->DB->getConn(), $email);
+        mysqli_real_escape_string($this->DB->getConn(), $passwd);
+        $hash = hash('sha256', $passwd);
+        $query = 'SELECT * FROM ' . $type . ' WHERE passwd = ? AND email = ?';
+        if ($stmt = mysqli_prepare($this->DB->getConn(), $query)) {
+            $stmt->bind_param("ss", $hash, $email);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $stmt->close();
+            if ($result->num_rows > 0) {
+                $this->Set_session($result->fetch_assoc(), $type);
+            } else {
+                Respond(false, "Incorrect Email or Password");
+            }
+        } else {
+            Respond(false, "Couldn't connect to Database");
+        }
+    }
 
 
     /**
@@ -127,12 +151,15 @@ class Log_In
         if ($type == "Barber")
             $_SESSION['approved'] = $result['approved'];
 
-        echo json_encode(array('success' => true, 'id' => $result['id'],
-            'fname'=>$result['fname'],
-            'lname'=>$result['lname'],
-            'email'=>$result['email'],
-            'type'=>$type,
-            'rating'=>$result['rating']),JSON_PRETTY_PRINT);
+        $success = array('success' => true, 'id' => $result['id'],
+            'fname' => $result['fname'],
+            'lname' => $result['lname'],
+            'email' => $result['email'],
+            'type' => $type,
+        );
+        if ($type != "Admin") $success =+ array('rating' => $result['rating']);
+
+        echo json_encode($success, JSON_PRETTY_PRINT);
         exit();
     }
 
